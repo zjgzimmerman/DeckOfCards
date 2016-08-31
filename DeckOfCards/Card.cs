@@ -15,13 +15,14 @@ namespace DeckOfCards
         public ranks cardRank { get; private set; }
 
 
-        //Constructor, Requires a suit and face value
+        //Constructor, Requires a suit and rank
         public Card(suits cardSuit, ranks cardRank)
         {
             this.cardSuit = cardSuit;
             this.cardRank = cardRank;
         }
 
+        //card ToString, formats card like "Eight of Diamonds"
         public override string ToString()
         {
             return string.Format("{0} of {1}", cardRank.ToString(), cardSuit.ToString());

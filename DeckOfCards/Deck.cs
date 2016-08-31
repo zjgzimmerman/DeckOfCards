@@ -8,8 +8,8 @@ namespace DeckOfCards
 {
     class Deck
     {
-
         ArrayList deck = new ArrayList();
+        //number of cards currently in the deck
         public int cardCount { get; private set; }
 
         //Create a new unshuffled deck
@@ -27,6 +27,7 @@ namespace DeckOfCards
         }
 
         //Pop a card off the deck and return it
+        //or return null if deck is empty
         public Card drawCard()
         {
             if (cardCount < 1)
