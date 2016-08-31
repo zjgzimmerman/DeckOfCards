@@ -20,6 +20,7 @@ namespace DeckOfCards
             Console.WriteLine("Is card 1 greater than card2? {0}", (card1 > card2).ToString());
 
             Deck deck1 = new Deck();
+            deck1.shuffleDeck();
             Card c;
             //iterate through all cards and display the value
             while ((c = deck1.drawCard()) != null)

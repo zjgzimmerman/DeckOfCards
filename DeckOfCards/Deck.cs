@@ -46,12 +46,26 @@ namespace DeckOfCards
         public void shuffleDeck()
         {
             ArrayList tempDeck = deck;
+            ArrayList newDeck = new ArrayList();
             Random rand = new Random();
             int randIndex = 0;
+
+            //while there are still elements in the temporary deck
+            //pick out random elements and put them into the new deck
+            //then remove from temporary deck
+            //once shuffled, then clear original deck and add shuffled elements
             while (tempDeck.Count > 0)
             {
-
+                randIndex = rand.Next(0, tempDeck.Count);
+                newDeck.Add(tempDeck[randIndex]);
+                tempDeck.RemoveAt(randIndex);
             }
+            deck.Clear();
+            foreach (Card element in newDeck)
+            {
+                deck.Add(element);
+            }
+            cardCount = deck.Count;
 
         }
     }
